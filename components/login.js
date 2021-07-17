@@ -50,7 +50,7 @@ export default class Login extends Component {
     if(this.state.isLoading){
       return(
         <View style={styles.preloader}>
-          <ActivityIndicator size="large" color="#9E9E9E"/>
+          <ActivityIndicator size="large" color="#4B0082"/>
         </View>
       )
     }    
@@ -71,7 +71,7 @@ export default class Login extends Component {
           secureTextEntry={true}
         />   
         <Button
-          color="#3740FE"
+          color="#4B0082"
           title="Signin"
           onPress={() => this.userLogin()}
         />   
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1
   },
   loginText: {
-    color: '#3740FE',
+    color: '#4B0082',
     marginTop: 25,
     textAlign: 'center'
   },

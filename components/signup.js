@@ -54,7 +54,7 @@ export default class Signup extends Component {
     if(this.state.isLoading){
       return(
         <View style={styles.preloader}>
-          <ActivityIndicator size="large" color="#9E9E9E"/>
+          <ActivityIndicator size="large" color="#4B0082"/>
         </View>
       )
     }    
@@ -81,7 +81,7 @@ export default class Signup extends Component {
           secureTextEntry={true}
         />   
         <Button
-          color="#3740FE"
+          color="#4B0082"
           title="Signup"
           onPress={() => this.registerUser()}
         />
@@ -110,11 +110,11 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     paddingBottom: 15,
     alignSelf: "center",
-    borderColor: "#ccc",
+    borderColor: "#4B0082",
     borderBottomWidth: 1
   },
   loginText: {
-    color: '#3740FE',
+    color: '#4B0082',
     marginTop: 25,
     textAlign: 'center'
   },
