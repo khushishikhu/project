@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 import firebase from '../database/firebase';
+import Drawercom from './drawer';
 
 export default class Dashboard extends Component {
   constructor() {
@@ -25,17 +26,20 @@ export default class Dashboard extends Component {
       uid: firebase.auth().currentUser.uid
     }    
     return (
-      <View style={styles.container}>
+        <>
+        <View style={styles.container}>
         <Text style = {styles.textStyle}>
           Hello, {this.state.displayName}
         </Text>
+        
 
         <Button
           color="#3740FE"
           title="Logout"
           onPress={() => this.signOut()}
-        />
+          />
       </View>
+      </>
     );
   }
 }
