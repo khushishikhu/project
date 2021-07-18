@@ -1,7 +1,7 @@
 // components/signup.js
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator, ImageBackground, ScrollView } from 'react-native';
 import firebase from '../database/firebase';
 
 
@@ -58,20 +58,23 @@ export default class Signup extends Component {
         </View>
       )
     }    
-    return (
-      <View style={styles.container}>  
+    return(
+      <>
+
+      <View style={styles.container}> 
+      
         <TextInput
           style={styles.inputStyle}
           placeholder="Name"
           value={this.state.displayName}
           onChangeText={(val) => this.updateInputVal(val, 'displayName')}
-        />      
+          />      
         <TextInput
           style={styles.inputStyle}
           placeholder="Email"
           value={this.state.email}
           onChangeText={(val) => this.updateInputVal(val, 'email')}
-        />
+          />
         <TextInput
           style={styles.inputStyle}
           placeholder="Password"
@@ -79,12 +82,12 @@ export default class Signup extends Component {
           onChangeText={(val) => this.updateInputVal(val, 'password')}
           maxLength={15}
           secureTextEntry={true}
-        />   
+          />   
         <Button
           color="#4B0082"
           title="Signup"
           onPress={() => this.registerUser()}
-        />
+          />
 
         <Text 
           style={styles.loginText}
@@ -92,6 +95,7 @@ export default class Signup extends Component {
           Already Registered? Click here to login
         </Text>                          
       </View>
+    </>
     );
   }
 }
