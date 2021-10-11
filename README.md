@@ -1,2 +1,2 @@
 # project
-just an android project
+A react-native app 
