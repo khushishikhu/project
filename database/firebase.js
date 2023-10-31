@@ -1,7 +1,7 @@
 // database/firebaseDb.js
-
-import * as firebase from 'firebase';
-
+import firebase from "firebase/compat/app";
+//import * as firebase from 'firebase';
+import "firebase/compat/auth";
 const firebaseConfig = {
     apiKey: "AIzaSyDmNfTrM2LaXMqd61gGzOq_2WW-FaiNgFA",
     authDomain: "foodie-dea07.firebaseapp.com",
