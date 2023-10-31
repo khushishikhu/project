@@ -2,4 +2,4 @@
 A react-native app 
 
 # Instructions
-expo start
+npx expo start
